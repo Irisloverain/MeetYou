@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro" rel="stylesheet">
+<link rel="stylesheet" href="/Css/Menu.css" >
+</head>
+<style>
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+body{
+  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+  margin: 0px;
+}
+/* Header */
+header {
+  width: 100%;
+  height: 60px;
+  background: #69658E;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.7))
+}
+
+header::after {
+  content: '';
+  clear: both;
+}
+.logo {
+  height: 45px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+#shopping-cart {
+    color: #fff;
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 15px;
+    padding-right: 10px;
+}
+nav {
+  float: right;
+}
+
+nav ul {
+width: 100%;
+display: inline-block;
+margin-right: 25px;
+padding: 0;
+list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 40px;
+  padding-top: 18px;
+  position: relative;
+}
+
+nav a {
+  color: #fefaff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #fefaff;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #fefaff;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/* Section01 */
+.Section01{
+    background-color: #b094b0;
+    height:350px;
+    display: flex;
+    justify-content: space-between;
+}
+.Banner{
+    width: 760px;
+    background-image: url(img/MenuBanner.png);
+    background-size: cover;
+}
+
+/* Section02 */
+.Section02{
+    background-color: #b094b0;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    gap:1%;
+    padding: 3%;
+}
+
+.Menu{
+padding: 5rem;
+background-color: #fefaff;
+border-radius: 10px;
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+width: 70%;
+height: auto;
+column-count: 3;
+}
+.Section02 ul{
+    page-break-inside: avoid;
+    padding: 0px;
+    background-color: aliceblue;
+    list-style: none;
+}
+
+.Section02 li{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.Section02 li:hover{
+    background:#dcdadc;
+}
+.checkInput{
+    margin: 0px;
+    flex: 0.5 0 0;
+}
+.drinkLabel{
+    flex: 2 1 0;
+    align-items: center;
+    font-size: 15px;
+}
+.Section02 label{
+    margin: 0;
+}
+.price{
+    flex: 1 1 0;
+    font-size: 15px;
+}
+
+.title{
+    height: 50px;
+    background-color: #7d6881;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    text-align: center;
+    line-height: 50px;
+    color: aliceblue;
+    font-size: 20px;
+}
+.size{
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: right;
+    letter-spacing: 10px;
+    border:none;
+}
+.other{
+    margin-right: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+
+
+.List{
+  background-color: #fefaff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  height: auto;
+}
+
+/* Modal */
+.modal-title{
+    color: #7d6881;
+    font-size:20px;
+    padding-top:30px;
+    padding-left:15px;
+}
+
+.modal-header .close{
+    margin-top:10px;
+}
+
+.modal-body{
+    padding:30px;
+}
+.modal-body .text{
+    color: #7d6881;
+    font-size: 18px;
+}
+
+.buttonT {
+width: 80px;
+margin:10px;
+color: #494949;
+text-transform: uppercase;
+text-align: center;
+background: #ffffff;
+padding: 10px;
+border: 2px solid #dcdadc;
+border-radius: 8px;
+display: inline-block;
+}
+.buttonT:focus-within {
+color: #ffffff;
+background: #b094b0;
+border-color: #b094b0;
+transition: all 0.4s ease 0s;
+}
+
+.btn-primary {
+margin-top: 30px;
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  background-color: #69658E;
+  border-color: #69658E;
+  border-radius: 10px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active:hover{
+  color: #fff;
+  background-color: #b094b0;
+  border-color: #b094b0;
+}
+.confirmbutton{
+    float: right;
+    padding-right: 25px;
+    padding-top:10px;
+    padding-bottom: 80px;
+}
+.btn-primary2 {
+  color: #fff;
+  background-color: #7d6881;
+  border-color: #7d6881;
+}
+.footer {
+    display: block;
+    font-size: 8pt;
+    color: white;
+    height: 210px;
+    line-height: 20px;
+    padding-top: 34px;
+    padding-bottom: 20px;
+    background-color: #69658E;
+}
+/*!------------------------------------響應式----------------------------------*/
+@media screen and (max-width: 1440px) {
+.Menu{
+    column-count: 2;
+}
+}
+
+@media screen and (max-width: 920px) {
+header {
+  width: 100%;
+  height: 80px;
+}
+
+header::after {
+  content: '';
+  clear: both;
+}
+.logo {
+  height: 35px;
+  display: block;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+float: none;
+text-align: center;
+}
+
+nav ul {
+  display: inline-block;
+  padding: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+nav li {
+  padding-top: 10px;
+  margin-left: 20px;
+}
+
+nav a {
+  font-size: 12px;
+}
+
+nav a::before {
+  display: none;
+}
+.Menu{
+    column-count: 1;
+}
+}
+
+
+@media screen and (max-width: 490px) {
+nav a {
+  font-size: 8px;
+}
+
+#shopping-cart {
+    font-size: 8px;
+    padding-right: 1px;
+}
+}
+
+@media screen and (max-width: 320px){
+nav li {
+    padding-top: 10px;
+    margin-left: 0px;
+}
+nav a {
+  font-size: 5px;
+}
+}
+</style>
+<body>
+<header>
+        <img src="/img/Title-02.png" class="logo" >
+        <nav>
+         <ul>
+           <li><a href="home.html">關於小巷小象</a></li>
+           <li><a href="home.html">最新消息</a></li>
+           <li><a href="home.html">飲品介紹</a></li>
+           <li><a href="home.html">聯絡我們</a></li>
+         <li><a href="home.html">訂購小巷小象</a></li>
+         <li><a href="#"><i class="fas fa-shopping-cart" id="shopping-cart"></i>購物車</a></li>
+         </ul>
+       </nav>
+ </header>
+     <div class="Section01">
+        <div class="Banner"></div>
+    </div>
+    
+    <div class="Section02">
+        <div class="Menu">
+            <ul>
+                <div class="title">芋頭系列</div>
+                <div class="size">M L</div>    
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="芋頭西米露">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">芋頭西米露</label>
+                <span class="price">45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55</span>
+                </li>
+            
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="芋頭牛奶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">芋頭牛奶</label>
+                <span class="price">55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;65</span>
+                </li> 
+            
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="芋頭鮮奶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">芋鮮牛奶</label>
+                <span class="price">65&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;75</span>
+                </li> 
+            </ul>
+
+            <ul>
+                <div class="title">紫紅系列</div>
+                <div class="size">M L</div>
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="紫黑米牛奶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">紫黑米牛奶</label>
+                <span class="price">45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55</span>
+                </li>
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="紅豆牛奶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">紅豆牛奶</label>
+                <span class="price">45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55</span>
+                </li>
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="紫黑米紅豆牛奶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">紫黑米紅豆牛奶</label>
+                <span class="price">45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55</span>
+                </li>
+            </ul>
+            
+            <ul>
+                <div class="title">薏仁系列</div>
+                <div class="size">M L</div>
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="薏仁牛奶">
+                    <input type="checkbox" class="checkInput" id="TaroSago" >
+                    <label class="drinkLabel" for="TaroSago">薏仁牛奶</label>
+                    <span class="price">45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55</span>
+                </li>
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="薏仁豆漿">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">薏仁豆漿</label>
+                <span class="price">45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55</span>
+                </li>
+            </ul>
+        
+            <ul>
+                <div class="title">飲茶系列</div>
+                <div class="size">M L</div>    
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="蔗香紅茶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">蔗香紅茶</label>
+                <span class="price">50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li>
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="茉莉綠茶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">茉莉綠茶</label>
+                <span class="price">40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li> 
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="青茶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">青茶</label>
+                <span class="price">35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li>
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="炭焙烏龍茶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">炭焙烏龍茶</label>
+                <span class="price">35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li>
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="奶茶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">奶茶</label>
+                <span class="price">35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li>
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="紅茶拿鐵">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">紅茶拿鐵</label>
+                <span class="price">35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li>
+            </ul>
+            
+            <ul>
+                <div class="title">燕麥系列</div>
+                <div class="size">M L</div>    
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="燕麥鮮奶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">燕麥鮮奶</label>
+                <span class="price">50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li>
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="燕麥牛奶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">燕麥牛奶</label>
+                <span class="price">40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li> 
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="燕麥豆漿">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">燕麥豆漿</label>
+                <span class="price">35&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li> 
+            </ul>
+        
+            <ul>
+                <div class="title">其他系列</div>
+                <div class="other">期間限定飲品</div>    
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="燕麥牛奶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">黑糖鮮奶</label>
+                <span class="price">30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li>
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="燕麥牛奶">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">芒果鮮奶</label>
+                <span class="price">40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li> 
+                <li data-toggle="modal" data-target="#exampleModal" data-whatever="燕麥豆漿">
+                <input type="checkbox" class="checkInput" id="TaroSago" >
+                <label class="drinkLabel" for="TaroSago">草莓芋頭</label>
+                <span class="price">50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </li> 
+            </ul>
+    </div>
+    <div class="List">
+        <div class="title">購買清單</div>
+        <div class="confirmbutton">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" onClick="location.href='confirm.html'">完成購物</button>
+        </div>
+    </div>
+    </div>   
+      
+        
+    </div>
+    </div>
+    </div>
+        <div class="footer">
+            <div style="text-align: center">
+                <p>
+                    小巷小象
+                    <br>
+                    客服電話：02-2778-8505
+                    <br>
+                    Messenger： m.me/ElephantInAlley
+                    <br>
+                    服務時間：週一至週日 8:00-17:30 (週二未提供服務)
+                    <br>
+                    地址: 106台北市大安區新生北路一段5巷1號
+                    <br>
+                    Copyright © 2019 小巷小象版權所有
+                    <br>Design By 106AC1023 林秀靜 / 106AC2007 林恩雅
+                </p>
+            </div>
+        </div>    
+     
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="modal-title" id="exampleModalLabel"></h5>   
+      </div>
+        
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+              <span class="text">＊大小選擇</span>
+              <br>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                <label for="A"class="btn buttonT active">
+                 <input type="radio" name="options" id="option1" autocomplete="off" checked>大
+                </label>
+                <label for="B"class="btn buttonT">
+                 <input type="radio" name="options" id="option2" autocomplete="off" checked> 小
+                </label>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <span class="text">＊溫度選擇</span>
+              <br>
+              <br>
+				<div class="btn-group-toggle" data-toggle="buttons" id="group2" role="group">
+                <label for="C"class="btn buttonT active">
+                <input type="checkbox" checked autocomplete="off" id="choice1"> 去冰
+                </label>
+                <label for="D"class="btn buttonT">
+                <input type="checkbox" checked autocomplete="off" id="choice2"> 微冰
+                </label>
+                <label for="E"class="btn buttonT">
+                <input type="checkbox" checked autocomplete="off"id="choice3"> 正常
+                </label>
+                <label for="F"class="btn buttonT">
+                <input type="checkbox" checked autocomplete="off"id="choice4"> 常溫
+                </label>
+                <label for="I"class="btn buttonT">
+                <input type="checkbox" checked autocomplete="off"id="choice5"> 熱
+                </label>
+                </div>
+          </div>
+            
+          <div class="form-group">
+            <span class="text">＊甜度選擇</span>
+              <br>
+              <br>
+				<div class="btn-group-toggle" data-toggle="buttons"role="group3">
+                <label for="C"class="btn buttonT active">
+                <input type="checkbox" checked autocomplete="off"> 無糖
+                </label>
+                <label for="C"class="btn buttonT">
+                <input type="checkbox" checked autocomplete="off"> 微糖
+                </label>
+                <label for="C"class="btn buttonT">
+                <input type="checkbox" checked autocomplete="off"> 半糖
+                </label>
+                <label for="C"class="btn buttonT">
+                <input type="checkbox" checked autocomplete="off"> 少糖
+                </label>
+                <label for="C"class="btn buttonT">
+                <input type="checkbox" checked autocomplete="off"> 全糖
+                </label>
+                </div>
+          </div>
+            
+			        <span class="text">＊數量選擇</span>
+                        <br>
+                        <br>
+                        <div class="input-group" id="DrinksNumber">
+                        <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                        <span class="glyphicon glyphicon-minus"></span>
+                        </button>
+                        </span>
+                        <input type="text" name="quant[1]" class="formControl checkInput" value="1" min="1" max="10">
+                        <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                        </span>
+                        
+                        <div class="selling-price number text-right"
+                        style="padding-top: 1.1rem;" data-bind="45"></div>
+                        <div class="subtotal number text-right" style="padding-top: 1.1rem;"></div>
+                        </div>
+        </form>
+      </div>
+        
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary2">確認</button>
+      </div>
+        
+    </div>
+  </div>
+</div>                   
+    </body>
+    
+<script>
+$('#exampleModal').on('show.bs.modal', function (event) {
+  var li = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = li.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text(recipient)
+})
+</script>
+    
+<script>
+$('.btn-number').click(function(e){
+    e.preventDefault();
+    
+    fieldName = $(this).attr('data-field');
+    type      = $(this).attr('data-type');
+    var input = $("input[name='"+fieldName+"']");
+    var currentVal = parseInt(input.val());
+    if (!isNaN(currentVal)) {
+        if(type == 'minus') {
+            
+            if(currentVal > input.attr('min')) {
+                input.val(currentVal - 1).change();
+            } 
+            if(parseInt(input.val()) == input.attr('min')) {
+                $(this).attr('disabled', true);
+            }
+
+        } else if(type == 'plus') {
+
+            if(currentVal < input.attr('max')) {
+                input.val(currentVal + 1).change();
+            }
+            if(parseInt(input.val()) == input.attr('max')) {
+                $(this).attr('disabled', true);
+            }
+
+        }
+    } else {
+        input.val(0);
+    }
+});
+$('.checkInput').focusin(function(){
+   $(this).data('oldValue', $(this).val());
+});
+$('.checkInput').change(function() {
+    
+    minValue =  parseInt($(this).attr('min'));
+    maxValue =  parseInt($(this).attr('max'));
+    valueCurrent = parseInt($(this).val());
+    
+    name = $(this).attr('name');
+    if(valueCurrent >= minValue) {
+        $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
+    } else {
+        alert('Sorry, the minimum value was reached');
+        $(this).val($(this).data('oldValue'));
+    }
+    if(valueCurrent <= maxValue) {
+        $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
+    } else {
+        alert('Sorry, the maximum value was reached');
+        $(this).val($(this).data('oldValue'));
+    }
+    
+    
+});
+$(".checkInput").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+             // Allow: Ctrl+A
+            (e.keyCode == 65 && e.ctrlKey === true) || 
+             // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });    
+</script>
+    
+<script>
+$('#exampleModal').on('show.bs.modal', function (event) {
+        var li = $(event.relatedTarget) // Button that triggered the modal
+        var price =selling-price.data("bind");
+        var qty =formControl checkInput.data("val()");
+        var result = price * qty;
+        var modal = $(this)
+        modal.find(".subtotal").text($.formatMoney(result));
+    });
+        
+</script>
+    
+<script>
+  $('#exampleModal').ready(function() {
+  $(".btn-default").click(function() {
+
+    var childClasses, group;
+
+    // add class "selected" to a clicked button
+    $(this).addClass("selected");
+
+    // get the parent's id of button element 
+    group = $(this).parent().attr('id');
+
+    // store all element of selected group 
+    childClasses = $("#" + group).children();
+
+    // remove previous selected button when user select a new button in the same group button
+    for (var i = 0; i < childClasses.length; i++) {
+      if (this.textContent != childClasses[i].textContent) {
+        $("#" + childClasses[i].id).removeClass("selected");
+      }
+    }
+
+  });
+});
+    
+    </script>

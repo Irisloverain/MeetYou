@@ -1,0 +1,352 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+body{
+  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+}
+header {
+  width: 100%;
+  height: 60px;
+  background: #69658E;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.7))
+
+}
+
+header::after {
+  content: '';
+  clear: both;
+}
+img {
+  height: 45px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+#shopping-cart {
+    color: #fff;
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 15px;
+    padding-right: 10px;
+}
+nav {
+  float: right;
+}
+
+nav ul {
+width: 100%;
+  display: inline-block;
+  margin-right: 25px;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 40px;
+  padding-top: 18px;
+  position: relative;
+}
+
+nav a {
+  color: #fefaff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #fefaff;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #fefaff;
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+.section_01{
+    height:300px;
+    background-image: url(../Menu/Pic/BK-01.png);
+    background-size:cover; 
+}
+
+.section_02{
+    background-image: url(../Menu/Pic/BK-02.png);
+    background-size:cover;
+    padding-left: 50px;
+    padding-right: 50px
+}
+
+.title{
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    background-color: #7d6881;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    text-align: center;
+    line-height: 50px;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.size{
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: right;
+    letter-spacing: 10px;
+    border:none;
+}
+.other{
+    margin-right: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.section_02 ul{
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: aliceblue;
+    list-style: none;
+    border-style:solid;
+    border-color:#dcdadc;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+.section_02 .ul1{
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: aliceblue;
+    list-style: none;
+    border-style:solid;
+    border-color:#dcdadc;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+.section_02 .ul2{
+    height: 550px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: aliceblue;
+    list-style: none;
+    border-style:solid;
+    border-color:#dcdadc;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+.section_02 .ul3{
+    height: 550px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: aliceblue;
+    list-style: none;
+    border-style:solid;
+    border-color:#dcdadc;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+.section_02 li{
+    height: 50px;
+    margin-bottom: 25px;
+    margin-right: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border-style:solid;
+    border-color:#dcdadc;
+    line-height: 30px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-top-right-radius:10px;
+    border-top-left-radius:10px;
+}
+
+.section_02 li:hover{
+    background:#dcdadc;
+}
+
+.section_02 .price{
+    font-size: 15px;
+    float: right;
+    line-height: 30px;
+}
+
+
+
+<--Modal-->
+
+.modal-header{
+}
+
+.modal-title{
+    color: #7d6881;
+    font-size:20px;
+    padding-top:30px;
+    padding-left:15px;
+}
+
+.modal-header .close{
+    margin-top:10px;
+}
+
+.modal-body{
+    padding:30px;
+}
+.modal-body .text{
+    color: #7d6881;
+    font-size: 18px;
+}
+
+.buttonT {
+width: 80px;
+margin:10px;
+color: #494949;
+text-transform: uppercase;
+text-align: center;
+background: #ffffff;
+padding: 10px;
+border: 2px solid #dcdadc;
+border-radius: 8px;
+display: inline-block;
+}
+.buttonT:focus-within {
+color: #ffffff;
+background: #b094b0;
+border-color: #b094b0;
+transition: all 0.4s ease 0s;
+}
+
+.btn-primary {
+margin-top: 30px;
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  background-color: #69658E;
+  border-color: #69658E;
+  border-radius: 10px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active:hover{
+  color: #fff;
+  background-color: #b094b0;
+  border-color: #b094b0;
+}
+.confirmbutton{
+    float: right;
+    padding-right: 25px;
+    padding-top:10px;
+    padding-bottom: 80px;
+}
+.btn-primary2 {
+  color: #fff;
+  background-color: #7d6881;
+  border-color: #7d6881;
+}
+.footer {
+    display: block;
+    font-size: 8pt;
+    color: white;
+    height: 210px;
+    line-height: 20px;
+    padding-top: 34px;
+    padding-bottom: 20px;
+    background-color: #69658E;
+}
+/*!------------------------------------響應式----------------------------------*/
+@media screen and (max-width: 1000px) {
+.section_02 ul{
+        height: 330px;
+    }
+.section_02 .ul1{
+    height: 250px;
+}
+
+.section_02 .ul3{
+    height: 330px;
+}
+}
+
+@media screen and (max-width: 920px) {
+header {
+  width: 100%;
+  height: 80px;
+}
+
+header::after {
+  content: '';
+  clear: both;
+}
+img {
+  height: 35px;
+  display: block;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+float: none;
+text-align: center;
+}
+
+nav ul {
+  display: inline-block;
+  padding: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+nav li {
+  padding-top: 10px;
+  margin-left: 20px;
+}
+
+nav a {
+  font-size: 12px;
+}
+
+nav a::before {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 490px) {
+nav a {
+  font-size: 8px;
+}
+
+#shopping-cart {
+    font-size: 8px;
+    padding-right: 1px;
+}
+}
+
+@media screen and (max-width: 320px) {
+nav li {
+    padding-top: 10px;
+    margin-left: 0px;
+}
+nav a {
+  font-size: 5px;
+}
+}
+
+

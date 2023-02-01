@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/fe5d4a9f7c.js"></script>
+    <link href="p-infor.css" rel="stylesheet">
+</head>
+    
+  <header>
+        <img src="Pic/Title-02.png">
+       <nav>
+        <ul>
+          <li><a href="confirm.html"><i class="fas fa-shopping-cart" id="shopping-cart"></i>購物車</a></li>
+          <li><a href="/home.html">關於小巷小象</a></li>
+          <li><a href="/home.html">最新消息</a></li>
+          <li><a href="/home.html">飲品介紹</a></li>
+          <li><a href="/home.html">聯絡我們</a></li>
+        <li><a href="/home.html">訂購小巷小象</a></li>
+        </ul>
+      </nav>
+   </header>
+    
+<body>   
+<div class="container">
+    
+      <div class="step">
+        <div class="btn-group-toggle" data-toggle="buttons" id="group2" role="group">
+        <label for="B"class="btn buttonA">
+            <input type="checkbox" checked autocomplete="off"><span><a href="'confirm.html">訂單明細</a></span>
+        </label>
+        <label for="B"class="btn buttonB">
+            <input type="checkbox" checked autocomplete="off"><span><a href="'p-infor.html">訂購資訊</a></span>
+        </label>
+        <label for="B"class="btn buttonC active">
+            <input type="checkbox" checked autocomplete="off"><span><a href="'compelete.html">訂購完成</a></span>
+        </label>
+        </div>
+    </div>
+
+  <div class="row">
+    <div class="container">
+        <div class="Mychart">
+            <form class="needs-validation" novalidate>
+                <div class="section_01">
+                <div>
+                <label class="subtitle" for="firstName">*訂購人</label><span class="note">不接受符號，十個字內</span>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="可填寫暱稱" required>
+                </div>
+                <br>
+                <div class="Telephon">
+                <label class="subtitle" for="Telephon">*電話</label><span class="note">請填寫正確號碼</span>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="連絡電話" required>
+                </div>
+            </div>
+                
+            <div class="section_02 form-group">
+              <label class="subtitle" for="PickWay">*取餐方式</label>
+              <br>
+              <div class="btn-group-toggle" data-toggle="buttons"role="group">
+              <label for="A"class="btn buttonT">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked>自取
+              </label>
+              <label for="A"class="btn buttonT flip">
+              <input type="radio" name="options" id="option2" autocomplete="off" checked> 外送
+              </label>
+              </div>
+        
+                <div class="Country">
+                <label class="subtitle" for="Adress">*外送地址</label>
+                <br>
+                <label for="country">縣市</label>
+                <br>
+                <select class="custom-select d-block w-100" id="country" required>
+                    <option value="">選擇...</option>
+                    <option>台北市</option>
+                    <option>基隆市</option>
+                    <option>新北市</option>
+                </select>
+                <br>
+                <label for="state">區域</label>
+                <select class="custom-select d-block w-100" id="state" required>
+                    <option value="">選擇...</option>
+                    <option>文山區</option>
+                    <option>大安區</option>
+                </select>
+                <br>
+               <label for="zip">其餘住址</label>
+            <input type="text" class="form-control" id="zip" placeholder="" required>
+            </div>
+          </div>  
+              
+
+                   
+        <div class="section_03 form-group">
+            <label class="subtitle" for="Payment">*付款方式</label>
+            <br>
+            <div class="custom-control custom-radio">
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                <label class="custom-control-label" for="credit">現金付款</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label flip2" for="debit">信用卡</label>
+            </div>
+                <div class="Name">
+                <form class="checkout">
+                <p>
+                    <input type="text" class="checkout-input checkout-name" placeholder="Your name" autofocus>
+                    <input type="text" class="checkout-input checkout-exp" placeholder="MM">
+                    <input type="text" class="checkout-input checkout-exp" placeholder="YY">
+                </p>
+                <p>
+                    <input type="text" class="checkout-input checkout-card" placeholder="4111 1111 1111 1111">
+                    <input type="text" class="checkout-input checkout-cvc" placeholder="CVC">
+                </p>
+                </form>    
+                </div>
+          <div class="custom-control custom-radio">
+            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label" for="paypal">Apple pay</label>
+          </div>
+        </div>
+                
+        <div class="section_04 form-group">
+            <label class="subtitle" for="other">*其他</label>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="same-address">
+                <label class="custom-control-label flip3" for="same-address">開立統一發票 / 收據</label>
+            </div>
+            <div class="Bill">
+            <input type="text" class="checkout-input checkout-name" placeholder="輸入統一編號" autofocus>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="save-info">
+                <label class="custom-control-label" for="save-info">塑膠袋(+1元)</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input comment" id="plastic">
+                <label class="custom-control-label flip4" for="plastic">留言給門市</label>
+            </div>
+            <div class="Comment">
+            <input type="text" class="checkout-input comment" placeholder="輸入留言" autofocus>
+            </div>
+        </div> 
+    
+          
+        <div class="Next">   
+            <div class="comfirmbutton">
+            <button type="button" class="btn btn-secondary" onClick="location.href='confirm.html'">返回</button>
+            <button type="button" class="btn btn-primary"onClick="location.href='complete.html'">下一步</button>
+            </div>
+        </div>
+        </form>
+        </div>
+      </div>
+</div>
+</div>
+    
+    
+
+</body> 
+    
+    
+    
+<script>
+$().button('toggle')	
+$().button('dispose')
+
+$(".flip").click(function(){
+    $(".Country").slideToggle("slow");
+  });
+$(".flip2").click(function(){
+    $(".Name").slideToggle("slow");
+  });
+$(".flip3").click(function(){
+    $(".Bill").slideToggle("slow");
+  });
+$(".flip4").click(function(){
+    $(".Comment").slideToggle("slow");
+  });
+</script>
+    
+
+
+
+
+

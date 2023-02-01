@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="Css/complete.css" rel="stylesheet">
+</head>
+    
+  <header>
+        <img src="/img/Title-02.png" class="logo" >
+       <nav>
+        <ul>
+          <li><a href="/home.html">關於小巷小象</a></li>
+          <li><a href="/home.html">最新消息</a></li>
+          <li><a href="/home.html">飲品介紹</a></li>
+          <li><a href="/home.html">聯絡我們</a></li>
+        <li><a href="/home.html">訂購小巷小象</a></li>
+        <li><a href="confirm.html"><i class="fas fa-shopping-cart" id="shopping-cart"></i>購物車</a></li>
+        </ul>
+      </nav>
+   </header>
+    
+<body>   
+<div class="container">
+    
+    <div class="step">
+        <div class="btn-group-toggle" data-toggle="buttons" id="group2" role="group">
+        <label for="B"class="btn buttonA">
+            <input type="checkbox" checked autocomplete="off"><span><a href="'confirm.html">訂單明細</a></span>
+        </label>
+        <label for="B"class="btn buttonB">
+            <input type="checkbox" checked autocomplete="off"><span><a href="'p-infor.html">訂購資訊</a></span>
+        </label>
+        <label for="B"class="btn buttonC active">
+            <input type="checkbox" checked autocomplete="off"><span><a href="'compelete.html">訂購完成</a></span>
+        </label>
+        </div>
+    </div>
+
+<div class="container"></div>
+    <div class="Myform">
+        <span>訂購完成 !</span>
+        <p>感謝您的訂購。</p>
+        <hr>
+        <br>
+        <div class="notice">*到貨時間*</div>
+        <div class="clock">
+        <div id="Date"></div>
+        <ul>
+            <li id="hours"></li>
+            <li id="point">:</li>
+            <li id="min"></li>
+        </ul>
+        </div>
+        <div class="noticep">提醒您，可來店領取的時間為下單後10分鐘後。<br>此外，外送的時間依地區會有所不同。</div>
+    </div>
+</div>
+     <div class="confirmbutton">
+            <button type="button" class="btn btn-primary2" data-dismiss="modal" onClick="location.href='home.html'">返回首頁</button>
+            </div>
+</body>
+    
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+// Create two variables with names of months and days of the week in the array
+var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
+var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+// Create an object newDate()
+var newDate = new Date();
+// Retrieve the current date from the Date object
+newDate.setDate(newDate.getDate());
+// At the output of the day, date, month and year    
+$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+setInterval( function() {
+    // Create an object newDate () and extract the second of the current time
+    var seconds = new Date().getSeconds();
+    // Add a leading zero to the value of seconds
+    $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+    },1000);
+    
+setInterval( function() {
+    // Create an object newDate () and extract the minutes of the current time
+    var minutes = new Date().getMinutes();
+    // Add a leading zero to the minutes
+    $("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
+    },1000);
+    
+setInterval( function() {
+    // Create an object newDate () and extract the clock from the current time
+    var hours = new Date().getHours();
+    // Add a leading zero to the value of hours
+    $("#hours").html(( hours < 10 ? "0" : "" ) + hours);
+    }, 1000);
+    
+});     
+</script>

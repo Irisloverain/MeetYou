@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <script src="https://kit.fontawesome.com/fe5d4a9f7c.js"></script>
+      <link href="confirm.css" rel="stylesheet">
+    
+     </head>
+    
+    <header>
+        <img src="Pic/Title-02.png">
+       <nav>
+        <ul>
+          <li><a href="confirm.html"><i class="fas fa-shopping-cart" id="shopping-cart"></i>購物車</a></li>
+          <li><a href="/home.html">關於小巷小象</a></li>
+          <li><a href="/home.html">最新消息</a></li>
+          <li><a href="/home.html">飲品介紹</a></li>
+          <li><a href="/home.html">聯絡我們</a></li>
+        <li><a href="/home.html">訂購小巷小象</a></li>
+        </ul>
+      </nav>
+   </header>
+    
+<body>  
+    <div class="section_01">
+     <div class="step">
+        <div class="btn-group-toggle" data-toggle="buttons" id="group2" role="group">
+        <label for="B"class="btn buttonA">
+            <input type="checkbox" checked autocomplete="off"><span><a href="'confirm.html">訂單明細</a></span>
+        </label>
+        <label for="B"class="btn buttonB">
+            <input type="checkbox" checked autocomplete="off"><span><a href="'p-infor.html">訂購資訊</a></span>
+        </label>
+        <label for="B"class="btn buttonC active">
+            <input type="checkbox" checked autocomplete="off"><span><a href="'compelete.html">訂購完成</a></span>
+        </label>
+        </div>
+    </div>
+
+         <div class="Mychart">
+            <h4>
+            <span class="text-muted">我的購物車</span>
+            <span class="badge badge-secondary badge-pill">3</span>
+            </h4>
+            <ul>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+            <h6 class="my-0">芋頭鮮奶</h6>
+            <small class="text-muted">大 微冰 無糖</small>
+            </div>
+            <span class="text-muted">$75<i class="far fa-trash-alt" id="trash"></i></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+            <h6 class="my-0">紫黑米紅豆牛奶</h6>
+            <small class="text-muted">中 去冰 全糖</small>
+            </div>
+            <span class="text-muted">$50<i class="far fa-trash-alt" id="trash"></i></span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+            <h6 class="my-0">薏仁豆漿</h6>
+            <small class="text-muted">中 正常 半糖</small>
+            </div>
+            <span class="text-muted">$45<i class="far fa-trash-alt" id="trash"></i></span>
+            </li>
+            
+            <li class="list-group-item d-flex justify-content-between">
+            <strong>總計 (NTD)</strong>
+            <strong class="strongT">$165</strong>
+            </li>
+            </ul>
+            <div class="Next">
+            <button type="button" class="btn btn-secondary"onClick="location.href='Menu.html'">返回</button>
+            <button type="button" class="btn btn-primary" onClick="location.href='p-infor.html'">下一步</button>
+            </div>
+</div>
+</div>
+    
+     <div class="footer">
+        <div style="text-align: center">
+            <p>
+                小巷小象
+                <br>
+                客服電話：02-2778-8505
+                <br>
+                Messenger： m.me/ElephantInAlley
+                <br>
+                服務時間：週一至週日 8:00-17:30 (週二未提供服務)
+                <br>
+                地址: 106台北市大安區新生北路一段5巷1號
+                <br>
+                Copyright © 2019 小巷小象版權所有
+                <br>Design By 106AC1023 林秀靜 / 106AC2007 林恩雅
+            </p>
+        </div>
+    </div>
+    </body>
+    
+    
+    <script>
+   $(document).ready(function () {
+$('.stepper').mdbStepper();
+})
+
+function someFunction21() {
+setTimeout(function () {
+$('#horizontal-stepper').nextStep();
+}, 2000);
+}  
+    </script>
